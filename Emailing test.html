@@ -1,0 +1,43 @@
+`<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<link rel="import" href="">
+
+<head>
+  <meta charset="utf-8">
+  <title>Email</title>
+</head>
+<link rel="stylesheet" href="styles.css">
+
+<body>    
+<h1> Any doubts? Ask me here!</h1>
+<h4>Send your message...</h4>
+    <form action="mailto:rash.menezes@gmail.com" method="post" enctype="text/plain">
+  
+      <label>Your email: </label> <input type="email" name="email" placeholder="Type your email" maxlength="35" cols="25"><br><br>
+      <table>
+        <tr>
+          <td><label>Your message:&nbsp;</label></td>
+          <td><textarea placeholder="Type your message here..." rows="20" cols="80" name="message"></textarea></td>
+        </tr>
+      </table>
+      </tr><br><br>
+      <button onclick="trigger_submit()" type="submit">Submit your message...</button>
+    </form><br>
+    <button onclick="closeWindow()">Click here to shut this tab.</button>
+
+<script>
+    function trigger_submit() {
+      window.alert("Are you sure you want to submit your message?")
+    }
+
+    function closeWindow() {
+      tab = window.close();
+    }
+
+
+  </script>
+  </h3>
+  
+</body>
+
+</html>```
