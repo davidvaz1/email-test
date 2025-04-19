@@ -1,4 +1,4 @@
-/* WARNING: THIS REQUIRES EMAIL AND PASSWORD AS PLAINTEXT. FOR LOCAL USE ONLY. */
+# WARNING: THIS REQUIRES EMAIL AND PASSWORD AS PLAINTEXT. FOR LOCAL USE ONLY.
 
 from datetime import datetime
 import pandas
@@ -20,7 +20,7 @@ if today_tuple in birthdays_dict:
         contents = letter_file.read()
         contents = contents.replace("[NAME]", birthday_person["name"])
 
-    with smtplib.SMTP("smtp.gmail.com", 587) as connection: /*see below for other email servers*/
+    with smtplib.SMTP("smtp.gmail.com", 587) as connection: #see below for other email servers
         connection.starttls()
         connection.login(MY_EMAIL, MY_PASSWORD)
         connection.sendmail(
@@ -28,13 +28,13 @@ if today_tuple in birthdays_dict:
             to_addrs=birthday_person["email"],
             msg=f"Subject:Happy Birthday!\n\n{contents}"
         )
-/* smtp.gmail.com for gmail
-   smtp-mail.outlook.com for hotmail/outlook
-   smtp.mail.yahoo.com for yahoo
-   smtp.rediffmailpro.com for rediffmail
-   smtp.vsnl.net for VSNL (idk who uses that nowadays)
+  # smtp.gmail.com for gmail
+#   smtp-mail.outlook.com for hotmail/outlook
+  # smtp.mail.yahoo.com for yahoo
+#   smtp.rediffmailpro.com for rediffmail
+  # smtp.vsnl.net for VSNL (idk who uses that nowadays)
    
-   Port number 465 for SSl [outdated]
-   Port number 587 for TLS [used for security - see connection.starttls() at line 24]
+#   Port number 465 for SSl [outdated]
+  # Port number 587 for TLS [used for security - see connection.starttls() at line 24]
    
-*/
+# Made with ❤️🍵 by @davidvaz1 on GitHub
