@@ -1,12 +1,13 @@
 # WARNING: THIS REQUIRES EMAIL AND PASSWORD AS PLAINTEXT. FOR LOCAL USE ONLY.
+# USE COMMERCIALLY AT YOUR OWN RISK
 
 from datetime import datetime
 import pandas
 import random
 import smtplib
 
-MY_EMAIL = "" /*insert ur email here*/
-MY_PASSWORD = "" /*insert ur password here*/
+MY_EMAIL = "" # insert your email here
+MY_PASSWORD = "" # insert your password here
 
 today = datetime.now()
 today_tuple = (today.month, today.day)
